@@ -12,6 +12,7 @@ const server = http.createServer((req, res) => {
     res.end(`
       <h1>Welcome Home</h1>
       <p>This is the home page.</p>
+      <a href="/about">Go to About</a>
     `);
 
   } else if (req.url === "/about") {
@@ -22,6 +23,7 @@ const server = http.createServer((req, res) => {
     res.end(`
       <h1>About This Website</h1>
       <p>This website has two pages served by Node.js.</p>
+      <a href="/">Go to Home</a>
     `);
 
   } else {
@@ -31,6 +33,7 @@ const server = http.createServer((req, res) => {
 
     res.end(`
       <h1>Page Not Found</h1>
+      <a href="/">Go to Home</a>
     `);
   }
 });
